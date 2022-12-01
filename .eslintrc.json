@@ -1,6 +1,6 @@
 {
     "extends": ["qiuye"],
-    // "ignorePatterns": ["*.vue"],
+    "ignorePatterns": ["list.vue", "ConsoleDom.vue", "container.vue"],
     "rules": {
         "unicorn/filename-case": "off"
     }
