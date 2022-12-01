@@ -5,5 +5,7 @@ export const transDate = (date: Date) => {
     const D = date.getDay();
     const H = date.getHours();
     const S = date.getMinutes();
-    return `${Y}-${M}-${D} — ${H} : ${S}`;
+    let Sres = '';
+    Sres = S < 10 ? `0${S}` : S.toString();
+    return `${Y}-${M}-${D} — ${H} : ${Sres}`;
 };
