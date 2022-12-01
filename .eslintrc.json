@@ -1,0 +1,7 @@
+{
+    "extends": ["qiuye"],
+    // "ignorePatterns": ["*.vue"],
+    "rules": {
+        "unicorn/filename-case": "off"
+    }
+}
