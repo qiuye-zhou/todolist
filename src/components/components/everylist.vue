@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { MessageType } from '../../constant'
 import { Notice } from '../../utils/Notice'
-import { sample } from 'lodash'
+import { sample } from 'lodash-es'
 
 defineProps<{
     title: string;

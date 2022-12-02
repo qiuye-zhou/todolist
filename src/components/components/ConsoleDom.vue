@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { reactive, ref } from 'vue';
 import { useLocalStorage, useMedia } from 'use-aid';
-import { sample } from 'lodash'
+import { sample } from 'lodash-es'
 
 import { transData } from '../../utils/transData';
 import { transDate } from '../../utils/transDate';
