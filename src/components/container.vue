@@ -1,12 +1,10 @@
 <script lang="ts" setup>
-import { useLocalStorage } from 'use-aid';
+import { useLocalStorage, useDateFormat } from 'use-aid';
 import { reactive, onMounted } from 'vue';
 
 import list from './components/list.vue';
 import everylist from './components/everylist.vue';
 import ConsoleDom from './components/ConsoleDom.vue';
-
-import { lasttime } from '../utils/lasttime';
 
 const local = useLocalStorage();
 
@@ -20,10 +18,10 @@ const listdata = reactive({
  */
 const updataList = () => {
     const locallist = local.getAll()
-    const lastTime = lasttime(new Date(JSON.parse(locallist.filter(e => {return (e.key === 'LastTime')})[0].val)))
+    const lastTime = useDateFormat(new Date(JSON.parse(locallist.filter(e => {return (e.key === 'LastTime')})[0].val)), 'YYYY-M-D').value
     const nowTime = new Date().getTime()
     const lastTimeArr = lastTime.split('-')
-    const nowTimeArr = lasttime(new Date(nowTime)).split('-')
+    const nowTimeArr = useDateFormat(new Date(nowTime), 'YYYY-M-D').value.split('-')
     
     if(lastTimeArr[0] <= nowTimeArr[0] && lastTimeArr[1] <= nowTimeArr[1] && lastTimeArr[2] < nowTimeArr[2]) {
         const everylist = locallist.filter(e => {return ((!(e.key === 'LastTime')) && (e.val.every))})
@@ -103,7 +101,10 @@ onMounted(() => {
                 :date="item.val.date"
                 @complete="complete(item.key)"
             />
-            <h3 class="text-center" v-show="((listdata.list.length === 0) && listdata.everdaylist.length === 0)">暂时没有任务了哦</h3>
+            <h3 class="text-center" 
+                v-show="((listdata.list.length === 0) && listdata.everdaylist.filter(e => {e.val.datares}).length !== 0)"
+            >暂时没有任务了哦
+            </h3>
         </div>
     </div>
 </template>
