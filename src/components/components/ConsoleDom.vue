@@ -57,7 +57,7 @@ const addTask = () => {
 </script>
 <template>
     <div class="p-3 flex justify-around bg-slate-50 rounded-lg mb-5">
-        <el-button disabled @click="(dialogVisible = true, form.every = true)">
+        <el-button @click="(dialogVisible = true, form.every = true)">
             添加每日任务
         </el-button>
         <el-button @click="(dialogVisible = true, form.every = false)">

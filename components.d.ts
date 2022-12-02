@@ -15,6 +15,7 @@ declare module '@vue/runtime-core' {
     ElFormItem: typeof import('element-plus/es')['ElFormItem']
     ElInput: typeof import('element-plus/es')['ElInput']
     ElPopconfirm: typeof import('element-plus/es')['ElPopconfirm']
+    Everylist: typeof import('./src/components/components/everylist.vue')['default']
     List: typeof import('./src/components/components/list.vue')['default']
     Nav: typeof import('./src/components/Nav.vue')['default']
   }
