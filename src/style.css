@@ -3,17 +3,15 @@
 @tailwind utilities;
 
 @layer utilities {
-    @variants responsive {
-      .listcon {
-        height: 70vh;
-        overflow: hidden;
-        overflow-y: scroll;
-      }
-      .listcon::-webkit-scrollbar {
-        width: 0.2rem;
-      }
-      .listcon::-webkit-scrollbar-thumb {
-        background-color: rgb(178, 178, 178);
-      }
-    }
+  .listcon {
+    height: 70vh;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+  .listcon::-webkit-scrollbar {
+    width: 0.2rem;
+  }
+  .listcon::-webkit-scrollbar-thumb {
+    background-color: rgb(178, 178, 178);
+  }
   }
