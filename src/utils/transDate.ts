@@ -9,7 +9,6 @@ export const transDate = (date: Date) => {
     const D = date.getDate();
     const H = date.getHours();
     const S = date.getMinutes();
-    let Sres = '';
-    Sres = S < 10 ? `0${S}` : S.toString();
+    let Sres = `${S}`.padStart(2, '0');
     return `${Y}-${M}-${D} — ${H} : ${Sres}`;
 };
