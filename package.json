@@ -14,7 +14,7 @@
   "dependencies": {
     "element-plus": "^2.2.25",
     "lodash": "^4.17.21",
-    "use-aid": "^0.0.5",
+    "use-aid": "^0.0.6",
     "vue": "^3.2.41"
   },
   "devDependencies": {
