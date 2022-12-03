@@ -23,7 +23,7 @@ const confirm = () => {
 }
 </script>
 <template>
-    <div class="bg-gray-100 m-5 mt-0 p-1 rounded-md 
+    <div class="bg-gray-200 m-5 mt-0 p-1 rounded-md 
                 hover:shadow-md  hover:-translate-y-0.5 transition-all"
     >
         <h3 class="text-center">
