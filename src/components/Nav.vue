@@ -1,5 +1,5 @@
 <template>
-    <div class="mb-2 bg-gray-100 rounded-md p-3 flex items-center justify-between">
+    <div class="mb-2 bg-gray-200 rounded-md p-3 flex items-center justify-between">
         <p class="font-sans italic">
             ToDoList
         </p>

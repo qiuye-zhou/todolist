@@ -31,7 +31,6 @@ const updataList = () => {
             const val = everylist[i].val
             val.datares = false
             local.set(key, val)
-            console.log(local.getAll());
         }
     }
     
